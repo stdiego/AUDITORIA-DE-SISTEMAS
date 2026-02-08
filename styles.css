@@ -1,0 +1,471 @@
+/* 
+   THEME: CORPORATE GOVERNANCE / MASTER REPORT
+   Colors: Navy Blue, Official Gold, Document White, Status Red/Green
+*/
+
+:root {
+    --bg-app: #f0f2f5;
+    --bg-paper: #ffffff;
+    --primary-navy: #1a237e;
+    --text-dark: #2c3e50;
+    --text-light: #546e7a;
+    --border-paper: #cfd8dc;
+
+    --accent-gold: #fbc02d;
+    --status-red: #d32f2f;
+    --status-orange: #f57c00;
+    --status-green: #388e3c;
+
+    --font-head: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-app);
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.report-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--bg-paper);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 4rem;
+    position: relative;
+}
+
+/* Binder holes */
+.report-container::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-image: radial-gradient(#ccc 40%, transparent 41%);
+    background-size: 4px 50px;
+    background-position: 0 25px;
+}
+
+/* Header */
+.report-header {
+    border-bottom: 2px solid var(--primary-navy);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo-area {
+    color: var(--primary-navy);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area i {
+    font-size: 2.5rem;
+}
+
+.org-name {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.report-meta {
+    text-align: right;
+}
+
+.report-meta h1 {
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.report-meta p {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: var(--text-light);
+}
+
+.date {
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-top: 5px;
+}
+
+/* Sections */
+.module {
+    margin-bottom: 4rem;
+    border-bottom: 1px dashed var(--border-paper);
+    padding-bottom: 2rem;
+}
+
+.module:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: var(--font-head);
+    font-size: 1.6rem;
+    color: var(--primary-navy);
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--accent-gold);
+    padding-left: 15px;
+}
+
+.section-intro {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Summary Grid */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border: 1px solid var(--border-paper);
+    margin-bottom: 2rem;
+}
+
+.summary-item .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.summary-item .value {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.summary-item.status-warning .value {
+    color: var(--status-orange);
+}
+
+/* Audit Team */
+.audit-team {
+    background: rgba(26, 35, 126, 0.03);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.audit-team h3 {
+    font-size: 1rem;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+
+.team-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.member i {
+    color: var(--accent-gold);
+}
+
+/* Instruments */
+.instruments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.inst-card {
+    border: 1px solid var(--border-paper);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.inst-card i {
+    font-size: 1.5rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.inst-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.inst-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* Risk Heatmap */
+.risk-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.heatmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--text-dark);
+    gap: 2px;
+    background: #eee;
+    position: relative;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cell.green {
+    background: #c8e6c9;
+}
+
+.cell.yellow {
+    background: #fff9c4;
+}
+
+.cell.orange {
+    background: #ffe0b2;
+}
+
+.cell.red {
+    background: #ffcdd2;
+}
+
+.risk-dot {
+    width: 25px;
+    height: 25px;
+    background: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.axis-y {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: rotate(-90deg);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.axis-x {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.risk-legend ul {
+    list-style: none;
+}
+
+.risk-legend li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: var(--status-red);
+}
+
+.dot.orange {
+    background: var(--status-orange);
+}
+
+.dot.yellow {
+    background: var(--accent-gold);
+}
+
+/* Findings */
+.finding-paper {
+    background: white;
+    border: 1px solid var(--border-paper);
+    border-left: 5px solid #ccc;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.finding-paper.critical {
+    border-left-color: var(--status-red);
+}
+
+.finding-paper.medium {
+    border-left-color: var(--status-orange);
+}
+
+.nc-header {
+    background: #f5f5f5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-paper);
+}
+
+.nc-risk {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: white;
+}
+
+.nc-risk.high {
+    background: var(--status-red);
+}
+
+.nc-risk.medium {
+    background: var(--status-orange);
+}
+
+.finding-body {
+    padding: 1.5rem 2rem;
+}
+
+.finding-body h3 {
+    color: var(--primary-navy);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.finding-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.finding-grid strong {
+    color: var(--text-light);
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* Rec Table */
+.rec-table-container {
+    overflow-x: auto;
+}
+
+.rec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.rec-table th {
+    background: var(--primary-navy);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.rec-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-paper);
+}
+
+.rec-table tr:hover {
+    background: #f9f9f9;
+}
+
+/* Footer */
+.report-footer {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.signature {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.sig-line {
+    width: 250px;
+    height: 1px;
+    background: #333;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .summary-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .risk-layout {
+        flex-direction: column;
+    }
+
+    .report-container {
+        padding: 2rem;
+    }
+
+    .instruments-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems Audit | Master Governance Report</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="report-container">
+
+        <!-- Header -->
+        <header class="report-header">
+            <div class="logo-area">
+                <i class="fas fa-balance-scale"></i>
+                <div class="org-name">AUDIT & GOVERNANCE S.A.</div>
+            </div>
+            <div class="report-meta">
+                <h1>Informe Maestro de Auditoría</h1>
+                <p>Cliente: <strong>J&A Cargo Express Inc.</strong></p>
+                <p>Ref: Evaluación de Conformidad COBIT 5</p>
+                <div class="date">Julio 18, 2021</div>
+            </div>
+        </header>
+
+        <!-- Module 1: Executive Summary -->
+        <section class="module executive-summary">
+            <h2 class="section-title">1. Resumen Ejecutivo y Alcance</h2>
+            <p class="section-intro">
+                La presente auditoría evalúa la madurez de los controles TI aplicados a los procesos críticos de J&A
+                Cargo Express, verificando la alineación con los objetivos de negocio y la normativa interna.
+            </p>
+
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Activos Auditados</div>
+                    <div class="value">Sitio Web, Basing de Datos, Hosting, Dominios</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Objetivos de Control</div>
+                    <div class="value">Integridad (CIA), Disponibilidad, Confidencialidad</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Marco Normativo</div>
+                    <div class="value">COBIT 5 (Dominios APO / DSS)</div>
+                </div>
+                <div class="summary-item status-warning">
+                    <div class="label">Dictamen</div>
+                    <div class="value"><i class="fas fa-exclamation-triangle"></i> CON SALVEDADES</div>
+                </div>
+            </div>
+
+            <!-- Audit Team -->
+            <div class="audit-team">
+                <h3>Equipo Auditor Designado</h3>
+                <div class="team-list">
+                    <div class="member"><i class="fas fa-user-tie"></i> <span>Auditor Líder: Gestión de Proyecto</span>
+                    </div>
+                    <div class="member"><i class="fas fa-user-shield"></i> <span>Especialista Seguridad: Pruebas de
+                            Vulnerabilidad</span></div>
+                    <div class="member"><i class="fas fa-user-cog"></i> <span>Analista TI: Control de
+                            Infraestructura</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Methodology -->
+        <section class="module methodology">
+            <h2 class="section-title">2. Metodología e Instrumentos</h2>
+            <p class="section-text">
+                Se aplicó un enfoque mixto cualitativo/cuantitativo utilizando instrumentos validados para la
+                recolección de evidencia.
+            </p>
+            <div class="instruments-grid">
+                <div class="inst-card">
+                    <i class="fas fa-tasks"></i>
+                    <h4>Listas de Chequeo</h4>
+                    <p>Verificación binaria (Cumple/No Cumple) sobre los controles de acceso físico y lógico.</p>
+                </div>
+                <div class="inst-card">
+                    <i class="fas fa-comments"></i>
+                    <h4>Entrevistas</h4>
+                    <p>Sesiones con el personal de TI para evaluar el conocimiento de políticas.</p>
+                </div>
+                <div class="inst-card">
+                    <i class="fas fa-bug"></i>
+                    <h4>Análisis de Vulnerabilidad</h4>
+                    <p>Escaneo pasivo de la infraestructura de Hosting y Base de Datos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Risk Matrix -->
+        <section class="module risk-analysis">
+            <h2 class="section-title">3. Matriz de Calor de Riesgos</h2>
+            <div class="risk-layout">
+                <div class="heatmap">
+                    <div class="axis-y">Probabilidad</div>
+                    <div class="axis-x">Impacto</div>
+                    <!-- Grid -->
+                    <div class="cell green"></div>
+                    <div class="cell green"></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell green"></div>
+                    <div class="cell yellow"><span class="risk-dot" title="NC-03">R3</span></div>
+                    <div class="cell orange"><span class="risk-dot" title="NC-02">R2</span></div>
+                    <div class="cell yellow"></div>
+                    <div class="cell orange"><span class="risk-dot" title="NC-04">R4</span></div>
+                    <div class="cell red"><span class="risk-dot" title="NC-01">R1</span></div>
+                </div>
+                <div class="risk-legend">
+                    <ul>
+                        <li><span class="dot red"></span> <strong>R1: Obsolescencia Hardware</strong> (Crítico)</li>
+                        <li><span class="dot orange"></span> <strong>R2: Falta Política Riesgos</strong> (Alto)</li>
+                        <li><span class="dot orange"></span> <strong>R4: Errores Digitación</strong> (Alto)</li>
+                        <li><span class="dot yellow"></span> <strong>R3: Diseño Procesos</strong> (Medio)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: Findings (Detailed) -->
+        <section class="module findings">
+            <h2 class="section-title">4. Hallazgos Detallados (No Conformidades)</h2>
+
+            <!-- Finding 1 -->
+            <div class="finding-paper critical">
+                <div class="nc-header">
+                    <span class="nc-id">NC-2021-001</span>
+                    <span class="nc-risk high">RIESGO CRÍTICO</span>
+                </div>
+                <div class="finding-body">
+                    <h3><i class="fas fa-server"></i> Inexistencia de Área de Mantenimiento Técnico</h3>
+                    <div class="finding-grid">
+                        <div><strong>Hallazgo:</strong> La empresa no cuenta con un departamento o contrato técnico para
+                            el mantenimiento preventivo/correctivo del hardware.</div>
+                        <div><strong>Causa Raíz:</strong> Falta de asignación presupuestal y estructura organizacional
+                            deficiente.</div>
+                        <div><strong>Consecuencia:</strong> Obsolescencia tecnológica acelerada y riesgo inminente de
+                            pérdida de información por fallo físico de discos duros.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 2 -->
+            <div class="finding-paper medium">
+                <div class="nc-header">
+                    <span class="nc-id">NC-2021-002</span>
+                    <span class="nc-risk medium">RIESGO ALTO</span>
+                </div>
+                <div class="finding-body">
+                    <h3><i class="fas fa-file-contract"></i> Falta de Política de Gestión de Riesgos</h3>
+                    <div class="finding-grid">
+                        <div><strong>Hallazgo:</strong> No existe documentación formal sobre cómo proceder ante
+                            incidentes de seguridad (Virus, Ataques).</div>
+                        <div><strong>Causa Raíz:</strong> Cultura organizacional reactiva en lugar de preventiva.</div>
+                        <div><strong>Consecuencia:</strong> Tiempos de respuesta elevados ante incidentes, aumentando el
+                            impacto operativo.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finding 3 -->
+            <div class="finding-paper medium">
+                <div class="nc-header">
+                    <span class="nc-id">NC-2021-004</span>
+                    <span class="nc-risk medium">RIESGO MEDIO</span>
+                </div>
+                <div class="finding-body">
+                    <h3><i class="fas fa-user-times"></i> Errores Humanos / Capacitación</h3>
+                    <div class="finding-grid">
+                        <div><strong>Hallazgo:</strong> Alta tasa de errores en la digitación y manipulación de la Base
+                            de Datos.</div>
+                        <div><strong>Causa Raíz:</strong> Ausencia de un plan de capacitación continuada para los
+                            operarios del sistema.</div>
+                        <div><strong>Consecuencia:</strong> Corrupción de datos (Integridad) y reportes financieros
+                            inexactos.</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Module 5: Recommendations -->
+        <section class="module recommendations">
+            <h2 class="section-title">5. Plan de Acción Recomendado</h2>
+            <div class="rec-table-container">
+                <table class="rec-table">
+                    <thead>
+                        <tr>
+                            <th>Hallazgo</th>
+                            <th>Estándar Sugerido</th>
+                            <th>Acción Correctiva</th>
+                            <th>Plazo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NC-001 (Mantenimiento)</td>
+                            <td><strong>ITIL v4</strong></td>
+                            <td>Establecer contrato de Outsourcing para soporte técnico y ciclo de vida de activos.</td>
+                            <td>Inmediato</td>
+                        </tr>
+                        <tr>
+                            <td>NC-002 (Políticas)</td>
+                            <td><strong>ISO 27005 / MAGERIT</strong></td>
+                            <td>Implementar SGSI y documentar matriz de riesgos y controles.</td>
+                            <td>3 Meses</td>
+                        </tr>
+                        <tr>
+                            <td>NC-004 (Capacitación)</td>
+                            <td><strong>ISO 10015</strong></td>
+                            <td>Programa de formación técnica anual para usuarios finales.</td>
+                            <td>Recurrente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="report-footer">
+            <div class="signature">
+                <div class="sig-line"></div>
+                <p>Auditor Líder Certificado (CISA)</p>
+                <div class="sig-details">Licencia Profesional 90168-7</div>
+            </div>
+            <div class="disclaimer">
+                <p>CONFIDENCIAL: Este documento contiene información sensible de la infraestructura de J&A Cargo
+                    Express.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
